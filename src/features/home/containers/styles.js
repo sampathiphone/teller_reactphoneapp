@@ -28,6 +28,11 @@ const styles = ScaledSheet.create({
     marginVertical: '10@ms',
     marginHorizontal: '20@ms'
   },
+  currencyButtonContainer: {
+    height: '120@ms',
+    marginTop: '20@ms',
+    marginHorizontal: '5@ms'
+  },
 });
 
 export default styles;

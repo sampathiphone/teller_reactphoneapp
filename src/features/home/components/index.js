@@ -62,8 +62,8 @@ function CurrencyButton(props) {
                   :
                   < Text
                     style={[
-                      item.isSelected ? [styles.selectedButtonTitle, isDark && { color: colors.COLOR_SUB_TITLE_TEXT }]
-                        : styles.unselectedButtonTitle, isDark && { color: colors.COLOR_SUB_TITLE_TEXT }
+                      item.isSelected ? styles.selectedButtonTitle
+                        : styles.unselectedButtonTitle
                     ]}>
                     {` ${item.currency}${item.value}`}
                   </Text>
