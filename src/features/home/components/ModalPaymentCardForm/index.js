@@ -1,4 +1,4 @@
-// @flow Copyright ©2020 ChekMarc, Inc. All Rights Reserved.
+// @flow Copyright ©2020 SampathKumar, Inc. All Rights Reserved.
 import React from 'react';
 import { Modal,  Text,  View } from 'react-native';
 import { BUTTON_TYPE, BaseView, CustomButton } from '../../../../components';
@@ -26,8 +26,6 @@ export const ModalPaymentCardForm = (props) => {
               autoFocus = {true}
               requiresName
               requiresPostalCode
-              labelStyle = {{ color: colors.COLOR_SUB_TITLE_TEXT }}
-              inputStyle = {{ color: colors.COLOR_SUB_TITLE_TEXT }}
               onChange = {(form) => {
                 setFormData(form);
                 setIsValidCardData(form.valid);
@@ -46,7 +44,7 @@ export const ModalPaymentCardForm = (props) => {
 
           <CustomButton
             style = {styles.buttonCancel}
-            type = {isDark ? BUTTON_TYPE.BORDER_BLACK : BUTTON_TYPE.BODER_GRAY}
+            type = {BUTTON_TYPE.BORDER_BLUE}
             title = {'Cancel'}
             onPress = {() => {
               onPressCardFormDismiss && onPressCardFormDismiss();

@@ -3,9 +3,7 @@ import { ScaledSheet } from 'react-native-size-matters';
 import { colors } from '../../../config/colors';
 
 const styles = ScaledSheet.create({
-  container: {
-    flex: 1,
-  },
+  container: { flex: 1, marginHorizontal: '20@ms' },
   headerView: {
     justifyContent: 'center',
     backgroundColor:colors.COLOR_WHITE,

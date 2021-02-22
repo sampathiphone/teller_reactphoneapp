@@ -2,8 +2,7 @@
 import ApiConstants from './ApiConstants';
 
 export default function api(path, params, method, token) {
-  let options;
-  options = {
+  const options = {
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',

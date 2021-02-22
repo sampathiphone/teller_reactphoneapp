@@ -6,7 +6,8 @@ const images = {
     // eye: require('../assets/images/eye.png'),
     password: require('../assets/images/password.png'),
     man: require('../assets/images/man-user.png'),
-    logout: require('../assets/images/logout.png')
+    logout: require('../assets/images/logout.png'),
+    checkBoxTick: require('../assets/images/tick.png'),
   },
   background: {
     banner: require('../assets/images/bg_contribute.png')

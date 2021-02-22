@@ -11,16 +11,15 @@ import { KeyboardAwareView } from 'react-native-keyboard-aware-view';
 export default function Login({ navigation }) {
   const id = useSelector((state) => state.loginReducer.id);
   const dispatch = useDispatch();
-  const onLogin = () => dispatch(loginActions.requestLogin('test', '1234'));
   const [valueEmail, onChangeTextEmail] = React.useState('');
   const [valuePassword, onChangeTextPassword] = React.useState('');
 
-  const onSignUp = () => {
-    navigation.navigate('Signup');
+  const onLogin = () => {
+    dispatch(loginActions.requestLogin(valueEmail, valuePassword));
   };
 
   return (
-    <BaseView style = {styles.container}>
+    <BaseView>
       <KeyboardAwareView>
         <ScrollView>
 
@@ -28,7 +27,7 @@ export default function Login({ navigation }) {
             <Text style = {styles.headerTitle}>{'Log in'}</Text>
           </View>
 
-          <View style = {{ flex: 1, marginHorizontal: 20 }}>
+          <View style = {styles.container}>
             <TextInputLayer
               autoCapitalize = {false}
               iconLeft = {images.icons.mail}

@@ -1,8 +1,8 @@
-// @flow Copyright ©2020 ChekMarc, Inc. All Rights Reserved.
+// @flow Copyright ©2020 SampathKumar, Inc. All Rights Reserved.
 import React, { useState } from 'react';
 import { FlatList, Image, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { styles } from './styles';
-import { images } from '../../../config/images';
+import images from '../../../config/images';
 
 function CurrencyButton(props) {
   const [dollarArray, setDollerArray] = useState([
@@ -30,38 +30,38 @@ function CurrencyButton(props) {
   };
 
   return (
-    <View style={[styles.container, props.style]}>
+    <View style = {[styles.container, props.style]}>
       <FlatList
-        data={dollarArray}
-        numColumns={3}
-        renderItem={({ item, index }) => {
+        data = {dollarArray}
+        numColumns = {3}
+        renderItem = {({ item, index }) => {
           return (
             <TouchableOpacity
-              style={styles.mainConatiner}
-              onPress={() => onSelect(index)}>
+              style = {styles.mainConatiner}
+              onPress = {() => onSelect(index)}>
               <View
-                style={[
+                style = {[
                   styles.buttonContainer,
                   item.isSelected ?
-                    [styles.selectedButton, { backgroundColor: colors.COLOR_CURRENCY_BUTTON_BACKGROUND }]
+                    styles.selectedButton
                     : styles.unselectedButton,
                 ]}>
                 {item.value === 'Others' ?
 
                   <TextInput
-                    placeholder={'$ Others'}
-                    style={[styles.otherContribution, { color: colors.COLOR_SUB_TITLE_TEXT }]}
-                    onTouchStart={() => onSelect(index)}
-                    keyboardType="number-pad"
-                    value={currencyValue}
-                    onChangeText={(text) => {
-                      onChangeCurrencyValue(text)
+                    placeholder = {'$ Others'}
+                    style = {styles.otherContribution}
+                    onTouchStart = {() => onSelect(index)}
+                    keyboardType = "number-pad"
+                    value = {currencyValue}
+                    onChangeText = {(text) => {
+                      onChangeCurrencyValue(text);
                       props.onSelect( text ?? 0);
                     }
                     } />
                   :
                   < Text
-                    style={[
+                    style = {[
                       item.isSelected ? styles.selectedButtonTitle
                         : styles.unselectedButtonTitle
                     ]}>
@@ -70,16 +70,16 @@ function CurrencyButton(props) {
                 }
 
                 {item.isSelected &&
-                  <View style={styles.circle}>
+                  <View style = {styles.circle}>
                     <Image
-                      source={images.icons.checkBoxTick} />
+                      source = {images.icons.checkBoxTick} />
                   </View>}
               </View>
             </TouchableOpacity>
           );
         }}
-        keyExtractor={(item) => item.value}
-        extraData={referesh} />
+        keyExtractor = {(item) => item.value}
+        extraData = {referesh} />
     </View>
   );
 }

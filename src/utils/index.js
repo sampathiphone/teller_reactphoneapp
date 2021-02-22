@@ -1,4 +1,4 @@
-// @flow Copyright ©2020 ChekMarc, Inc. All Rights Reserved.
+// @flow Copyright ©2020 SampathKumar, Inc. All Rights Reserved.
 
 import  { Alert } from 'react-native';
 

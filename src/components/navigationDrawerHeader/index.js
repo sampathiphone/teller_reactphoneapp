@@ -1,6 +1,6 @@
-// @flow Copyright ©2020 ChekMarc, Inc. All Rights Reserved.
+// @flow Copyright ©2020 SampathKumar, Inc. All Rights Reserved.
 import React from 'react';
-import { Image, TouchableOpacity, View, Alert } from 'react-native';
+import { Alert, Image, TouchableOpacity, View } from 'react-native';
 import images from '../../config/images';
 import { ScaledSheet } from 'react-native-size-matters';
 import { useDispatch } from 'react-redux';
@@ -28,15 +28,15 @@ export const NavigationDrawerHeader = (props) => {
       ],
       { cancelable: false }
     );
-  }
+  };
 
   return (
-    <View style={styles.container}>
-      <TouchableOpacity onPress={() => {
-        onPressLogout()
+    <View style = {styles.container}>
+      <TouchableOpacity onPress = {() => {
+        onPressLogout();
       }}>
-        <Image style={styles.moreIcon}
-          source={images.icons.logout} resizeMode="contain"
+        <Image style = {styles.moreIcon}
+          source = {images.icons.logout} resizeMode = "contain"
         />
       </TouchableOpacity>
     </View>

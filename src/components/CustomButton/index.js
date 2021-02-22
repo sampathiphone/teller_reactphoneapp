@@ -13,7 +13,7 @@ export const BUTTON_TYPE = {
 export const CustomButton = (props) => {
   let buttonTypeStyle = {};
   let textColor = colors.COLOR_WHITE;
-  let titleStyle = styles.titleRegular;
+  const titleStyle = styles.titleRegular;
 
   switch (props.type) {
   case BUTTON_TYPE.GREEN:

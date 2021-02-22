@@ -19,7 +19,8 @@ export default function Signup({ navigation }) {
   const [password, setPassword] = React.useState('Apple@2020');
   const [confirmPassword, setConfirmPassword] = React.useState('Apple@2020');
   const [isDatePickerVisible, setDatePickerVisibility] = React.useState(false);
-  registerUserData = new UserModel();
+
+  const registerUserData = new UserModel();
 
   const handleConfirm = (date) => {
     setDob(moment(date).format('MM-DD-YYYY'));
@@ -53,6 +54,7 @@ export default function Signup({ navigation }) {
     } else if (password !== confirmPassword) {
       alertMessage = 'Password and confirm password\'s are doesn\'t match, please check it!';
     }
+
     return alertMessage;
   };
 
@@ -66,15 +68,13 @@ export default function Signup({ navigation }) {
       registerUserData.phoneNumber = phoneNumber;
       registerUserData.dob = dob;
       registerUserData.password = password;
-
-      console.log("registerUserData -------",registerUserData);
-
+      console.log("registerUserData -------", registerUserData);
+      navigation.pop();
     }
   };
 
-
   return (
-    <BaseView style = {styles.container}>
+    <BaseView>
       <KeyboardAwareView>
         <ScrollView>
 
@@ -82,7 +82,7 @@ export default function Signup({ navigation }) {
             <Text style = {styles.headerTitle}>{'Sign up'}</Text>
           </View>
 
-          <View style = {{ flex: 1, marginHorizontal: 20 }}>
+          <View style = {styles.container}>
 
             <TextInputLayer
               autoCapitalize = {false}
@@ -176,7 +176,6 @@ export default function Signup({ navigation }) {
         title = {'Sign up'}
         onPress = {() => {
           onSignupProfile();
-          // navigation.pop();
         }}
       />
 

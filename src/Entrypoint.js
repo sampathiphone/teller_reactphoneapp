@@ -4,7 +4,7 @@ import { ActivityIndicator } from 'react-native';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/es/integration/react';
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
-
+import RNBootSplash from "react-native-bootsplash";
 import Navigator from './navigation';
 import configureStore from './store';
 

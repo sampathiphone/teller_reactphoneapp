@@ -2,8 +2,8 @@
 import { ScaledSheet } from 'react-native-size-matters';
 
 const styles = ScaledSheet.create({
-  container: { flex: 1, 
-    marginHorizontal: '22@ms' 
+  container: { flex: 1,
+    marginHorizontal: '22@ms'
   },
   titleText: {
     fontSize: 22,
@@ -30,8 +30,8 @@ const styles = ScaledSheet.create({
   },
   currencyButtonContainer: {
     height: '120@ms',
-    marginTop: '20@ms',
-    marginHorizontal: '5@ms'
+    marginVertical: '40@ms',
+    marginHorizontal: '5@ms',
   },
 });
 
