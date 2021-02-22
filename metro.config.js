@@ -1,9 +1,4 @@
-/**
- * Metro configuration for React Native
- * https://github.com/facebook/react-native
- *
- * @format
- */
+// @flow Copyright ©2020 SampathKumar, Inc. All Rights Reserved.
 
 module.exports = {
   transformer: {
